@@ -1,3 +1,11 @@
+_welcome:
+    pattern: /
+    defaults: { _controller: CursoPruebaDoctrineBundle:Default:index }
+
+CursoPruebaDoctrineBundle:
+    resource: "@CursoPruebaDoctrineBundle/Resources/config/routing.yml"
+    prefix:   /doctrine
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

@@ -1,3 +1,12 @@
 CursoPruebaDoctrineBundle_homepage:
     pattern:  /
     defaults: { _controller: CursoPruebaDoctrineBundle:Default:index }
+    
+CursoPruebaDoctrineBundle_dql:
+    pattern:  /listado_ofertas
+    defaults: { _controller: CursoPruebaDoctrineBundle:Default:listadoOfertas }
+
+
+CursoPruebaDoctrineBundle_custom:
+    pattern:  /custom/{_controller}
+    

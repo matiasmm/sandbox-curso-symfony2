@@ -145,4 +145,342 @@ class Oferta
         $this->usuario = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Oferta
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Oferta
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param text $descripcion
+     * @return Oferta
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return text 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set condiciones
+     *
+     * @param text $condiciones
+     * @return Oferta
+     */
+    public function setCondiciones($condiciones)
+    {
+        $this->condiciones = $condiciones;
+        return $this;
+    }
+
+    /**
+     * Get condiciones
+     *
+     * @return text 
+     */
+    public function getCondiciones()
+    {
+        return $this->condiciones;
+    }
+
+    /**
+     * Set foto
+     *
+     * @param string $foto
+     * @return Oferta
+     */
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+        return $this;
+    }
+
+    /**
+     * Get foto
+     *
+     * @return string 
+     */
+    public function getFoto()
+    {
+        return $this->foto;
+    }
+
+    /**
+     * Set precio
+     *
+     * @param decimal $precio
+     * @return Oferta
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+        return $this;
+    }
+
+    /**
+     * Get precio
+     *
+     * @return decimal 
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * Set descuento
+     *
+     * @param decimal $descuento
+     * @return Oferta
+     */
+    public function setDescuento($descuento)
+    {
+        $this->descuento = $descuento;
+        return $this;
+    }
+
+    /**
+     * Get descuento
+     *
+     * @return decimal 
+     */
+    public function getDescuento()
+    {
+        return $this->descuento;
+    }
+
+    /**
+     * Set fechaPublicacion
+     *
+     * @param datetime $fechaPublicacion
+     * @return Oferta
+     */
+    public function setFechaPublicacion($fechaPublicacion)
+    {
+        $this->fechaPublicacion = $fechaPublicacion;
+        return $this;
+    }
+
+    /**
+     * Get fechaPublicacion
+     *
+     * @return datetime 
+     */
+    public function getFechaPublicacion()
+    {
+        return $this->fechaPublicacion;
+    }
+
+    /**
+     * Set fechaExpiracion
+     *
+     * @param datetime $fechaExpiracion
+     * @return Oferta
+     */
+    public function setFechaExpiracion($fechaExpiracion)
+    {
+        $this->fechaExpiracion = $fechaExpiracion;
+        return $this;
+    }
+
+    /**
+     * Get fechaExpiracion
+     *
+     * @return datetime 
+     */
+    public function getFechaExpiracion()
+    {
+        return $this->fechaExpiracion;
+    }
+
+    /**
+     * Set compras
+     *
+     * @param integer $compras
+     * @return Oferta
+     */
+    public function setCompras($compras)
+    {
+        $this->compras = $compras;
+        return $this;
+    }
+
+    /**
+     * Get compras
+     *
+     * @return integer 
+     */
+    public function getCompras()
+    {
+        return $this->compras;
+    }
+
+    /**
+     * Set umbral
+     *
+     * @param integer $umbral
+     * @return Oferta
+     */
+    public function setUmbral($umbral)
+    {
+        $this->umbral = $umbral;
+        return $this;
+    }
+
+    /**
+     * Get umbral
+     *
+     * @return integer 
+     */
+    public function getUmbral()
+    {
+        return $this->umbral;
+    }
+
+    /**
+     * Set revisada
+     *
+     * @param boolean $revisada
+     * @return Oferta
+     */
+    public function setRevisada($revisada)
+    {
+        $this->revisada = $revisada;
+        return $this;
+    }
+
+    /**
+     * Get revisada
+     *
+     * @return boolean 
+     */
+    public function getRevisada()
+    {
+        return $this->revisada;
+    }
+
+    /**
+     * Add usuario
+     *
+     * @param Curso\PruebaDoctrineBundle\Entity\Usuario $usuario
+     */
+    public function addUsuario(\Curso\PruebaDoctrineBundle\Entity\Usuario $usuario)
+    {
+        $this->usuario[] = $usuario;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * Set tienda
+     *
+     * @param Curso\PruebaDoctrineBundle\Entity\Tienda $tienda
+     * @return Oferta
+     */
+    public function setTienda(\Curso\PruebaDoctrineBundle\Entity\Tienda $tienda = null)
+    {
+        $this->tienda = $tienda;
+        return $this;
+    }
+
+    /**
+     * Get tienda
+     *
+     * @return Curso\PruebaDoctrineBundle\Entity\Tienda 
+     */
+    public function getTienda()
+    {
+        return $this->tienda;
+    }
+
+    /**
+     * Set ciudad
+     *
+     * @param Curso\PruebaDoctrineBundle\Entity\Ciudad $ciudad
+     * @return Oferta
+     */
+    public function setCiudad(\Curso\PruebaDoctrineBundle\Entity\Ciudad $ciudad = null)
+    {
+        $this->ciudad = $ciudad;
+        return $this;
+    }
+
+    /**
+     * Get ciudad
+     *
+     * @return Curso\PruebaDoctrineBundle\Entity\Ciudad 
+     */
+    public function getCiudad()
+    {
+        return $this->ciudad;
+    }
 }
