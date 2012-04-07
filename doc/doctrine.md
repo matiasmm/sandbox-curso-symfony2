@@ -19,4 +19,4 @@ Probando características de Doctrine2
 
 2. Listado con DQL
 ------------------
-   - [ src/Curso/PruebaDoctrineBundle/Controller/DefaultController ]
+   - [Default Controller](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Controller/DefaultController.php#L22)
