@@ -1,0 +1,7 @@
+parameters:
+#    curso_prueba_doctrine.example.class: Curso\PruebaDoctrineBundle\Example
+
+services:
+#    curso_prueba_doctrine.example:
+#        class: %curso_prueba_doctrine.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

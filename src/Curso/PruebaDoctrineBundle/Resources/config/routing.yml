@@ -1,0 +1,3 @@
+CursoPruebaDoctrineBundle_homepage:
+    pattern:  /
+    defaults: { _controller: CursoPruebaDoctrineBundle:Default:index }
