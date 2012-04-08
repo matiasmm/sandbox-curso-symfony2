@@ -1,4 +1,16 @@
 {% for item in collection %}
-    <li>{{ item.nombre }}</li>
+<ul>
+
+    {% for column in columns %}
+        {% if attribute(item, column) %}
+            <li>{{ attribute(item, column) }}</li>
+        {% endif %}
+        
+    {% endfor %}
+           
+    {% if column_date is defined %}
+        <li>{{ attribute(item, column_date) | date }}</li>
+    {% endif %}    
+</ul>
 {% endfor %}
 

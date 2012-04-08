@@ -109,7 +109,7 @@ class Oferta
      * @var \Doctrine\Common\Collections\ArrayCollection
      *
      * @ORM\ManyToMany(targetEntity="Usuario", inversedBy="oferta")
-     * @ORM\JoinTable(name="venta",
+     * @ORM\JoinTable(name="Venta",
      *   joinColumns={
      *     @ORM\JoinColumn(name="oferta_id", referencedColumnName="id")
      *   },
@@ -482,5 +482,10 @@ class Oferta
     public function getCiudad()
     {
         return $this->ciudad;
+    }
+    
+    public function getNombreUsuario(){
+        
+        return 'Usuario> '. $this->usuario[0]->getNombre();
     }
 }
