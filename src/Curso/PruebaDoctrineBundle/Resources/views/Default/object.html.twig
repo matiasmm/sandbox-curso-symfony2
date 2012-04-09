@@ -1,0 +1,9 @@
+<ul>
+    {% for attr in attributes %}
+        {% if attribute(object, attr) %}
+            <li>{{ attribute(object, attr) }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+

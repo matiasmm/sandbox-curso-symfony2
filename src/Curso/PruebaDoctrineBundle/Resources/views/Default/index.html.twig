@@ -1,12 +1,24 @@
 <h2>El modelo: Pruebas D2</h2>
 
+<h3>Queries a mano</h3>
+
 <ul>
-    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertas'}) }}">DQL: Listado simple</a> :: listadoOfertasAction</li>
-    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasWithJoins'}) }}">DQL: Listado más complejo</a> :: listadoOfertasWithJoins</li>
-    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:dqlCount'}) }}">DQL: Contador de resultados</a> :: dqlCountAction</li>
-    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:hidratandoUnArreglo'}) }}">Modos de Hidratación: Trayendo resultados en un arreglo</a> :: hidratandoUnArregloAction</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasDQL'}) }}">DQL: Listado simple</a> :: listadoOfertasDQL</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasWithJoinsDQL'}) }}">DQL: Listado más complejo</a> :: listadoOfertasWithJoinsDQL</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:countDQL'}) }}">DQL: Contar resultados</a> :: countDQL</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:hidratandoUnArregloDQL'}) }}">DQL: Hidratando un arreglo</a> :: hidratandoUnArregloDQL</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:hidratandoUnArregloQB'}) }}">QueryBuilder: Hidratando un arreglo</a> :: hidratandoUnArregloQB</li>
 </ul>
+<h3>Repositorios</h3>
 <ul>
-    
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasRepo'}) }}">Repo: Listado simple</a> :: listadoOfertasRepo</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorIdRepo'}) }}">Repo: Obtener una oferta por id</a> :: obtenerOfertaPorIdRepo</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorSlugRepo'}) }}">Repo: Obtener una oferta por slug</a> :: obtenerOfertaPorSlugRepo</li>
+</ul>
+<h3>How Doctrine keeps track of Objects</h3>
+<ul>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasRepo'}) }}">Repo: Listado simple</a> :: listadoOfertasRepo</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorIdRepo'}) }}">Repo: Obtener una oferta por id</a> :: obtenerOfertaPorIdRepo</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorSlugRepo'}) }}">Repo: Obtener una oferta por slug</a> :: obtenerOfertaPorSlugRepo</li>
 </ul>
 
