@@ -37,11 +37,11 @@ Doctrine Migrations
 
   * Volvemos a la ultima version de la BD antes de realizar mofidicaciones
 
-    bin/install.sh
+      bin/install.sh
 
   * Ejecutamos el script para ver las diferencias de la base de datos solo para tener de referencia como ayuda para hacer el archivo de migración.
 
-    php app/console doctrine:schema:update --dump-sql
+      php app/console doctrine:schema:update --dump-sql
 
   * Generamos un archivo de migración vacío.
 
@@ -53,4 +53,4 @@ Doctrine Migrations
 
   * Ejecutamos el archivo de migración
 
-    php app/console doctrine:migrations:migrate
+      php app/console doctrine:migrations:migrate
