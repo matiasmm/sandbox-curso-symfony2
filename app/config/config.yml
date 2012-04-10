@@ -57,6 +57,7 @@ stof_doctrine_extensions:
             timestampable: false # not needed: listeners are not enabled by default
             sluggable: true
             loggable: true
+            softdeleteable: true
                         
 # Swiftmailer Configuration
 swiftmailer:

@@ -245,13 +245,13 @@ class DefaultController extends Controller
     
     
     /**
-     * Loggable Extension 
+     * Softdeleteable Extension 
      */
-    public function loggableExtensionAction(){
+    public function softdeleteableExtensionAction(){
         $em = $this->getDoctrine()->getEntityManager();
         
         //Busco el articulo con id 1 y si no existe creo uno nuevo
-        $articulo = $em->getRepository("CursoPruebaDoctrineBundle:CursoArticulo")->findOneById(1) ?: new Entity\CursoArticulo();
+        $articulo = new Entity\CursoArticulo();
         
         $articulo->setTitulo($articulo->getTitulo() . " ~");
         $articulo->setDescripcion($articulo->getDescripcion() . " ~");
@@ -259,20 +259,19 @@ class DefaultController extends Controller
         $em->persist($articulo);
         $em->flush();
         
-        return $this->render('CursoPruebaDoctrineBundle:Default:object.html.twig', array(
-            'object' => $articulo,
-            'attributes' => array('id', 'titulo', 'slug'),
-         ));
+        $deleted_at_before_deleting = $articulo->getDeletedAt();
+        
+        
+        $em->remove($articulo);
+        $em->flush();
+        $deleted_at_after_deleting = $articulo->getDeletedAt();
+        
+        
+        return new Response(sprintf(<<<HTML
+   <pre> Antes de borrar deleted_at era: %s, pero ahora es: %s
+HTML
+        , var_export($deleted_at_before_deleting,true), $deleted_at_after_deleting->format('d/m/Y H:m:s')));
         
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

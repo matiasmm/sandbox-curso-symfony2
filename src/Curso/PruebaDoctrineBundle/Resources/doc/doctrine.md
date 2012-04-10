@@ -24,13 +24,27 @@ Listado con DQL
 Doctrine Extensions [Gedmo]
 ---------------------------
 
-  * Generamos la clase CursoCategoria
+Generamos la clase CursoCategoria
 
     php app/console doctrine:generate:entity
 
-  * Actualizamos el cambio en la base de datos
+Actualizamos el cambio en la base de datos
 
     php app/console doctrine:schema:update
+
+Aplicamos la Extension en CursoCategoria: [src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php#L34)
+
+
+
+Hay más extensiones:
+
+  - translatable
+  - timestampable
+  - sluggable
+  - tree
+  - sortable
+  - softdeletable
+
 
 Doctrine Migrations
 -------------------
