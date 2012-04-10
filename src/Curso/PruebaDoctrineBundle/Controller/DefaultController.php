@@ -295,7 +295,7 @@ HTML
     
     
     /**
-     * Query de reservas cacheadas
+     * Herencia
      */
     public function herenciaAction(){
         $em = $this->getDoctrine()->getEntityManager();
