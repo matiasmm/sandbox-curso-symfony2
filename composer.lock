@@ -100,7 +100,16 @@
         {
             "package": "twig/twig",
             "version": "1.6.2"
+        },
+        {
+            "package": "doctrine/doctrine-migrations-bundle",
+            "version": "dev-master"
+        },
+        {
+            "package": "stof/doctrine-extensions-bundle",
+            "version": "dev-master"
         }
+
     ],
     "aliases": []
 }
