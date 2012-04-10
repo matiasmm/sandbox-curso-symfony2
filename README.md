@@ -9,6 +9,6 @@ Instalación
     chmod +x bin/install.sh
     bin/install.sh
 
-[Ejemplos con Doctrine2](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/doc/doctrine.md)
+[Ejemplos con Doctrine2](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Resources/doc/doctrine.md)
 
 
