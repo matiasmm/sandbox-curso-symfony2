@@ -161,20 +161,77 @@ class DefaultController extends Controller
          ));
     }
     
-    
-    public function insertAction(){
+    /**
+     * Agregando una nueva oferta 
+     */
+    public function crearOfertaCRUDAction(){
         $em = $this->getDoctrine()->getEntityManager();
         
-        // Nuevo
+        ## Nuevo ##
         $oferta = new Entity\Oferta();
-        $oferta->setNombre('matias');
-        $oferta->setSlug('matias');
+        $oferta->setNombre('prueba');
+        $oferta->setSlug('custom-slug');
+        $oferta->setDescripcion("dd");
+        $oferta->setCondiciones("dd");
+        $oferta->setFoto('d');
+        $oferta->setPrecio('d');
+        $oferta->setDescuento('d');
+        $oferta->setCompras('d');
+        $oferta->setUmbral('d');
+        $oferta->setRevisada('d');
         
-        // Attached
-        $em->persist($oferta); // Todavia no se ejecuto ninguna consulta
+        
+        ## Manejado ##
+        $em->persist($oferta); // Da aviso al EntityManager de la existencia de este nuevo objeto. Ninguna consulta todavia.
+        $id_antes_del_flush = $oferta->getId() ?: 'Nada' ;
+        
+        ## Queries ##
+        $em->flush(); // persiste esto en la bd;
+        $id_despues_del_flush = $oferta->getId();
         
         
+        return new Response(sprintf("Antes del flush: %s, Despues del flush: %s",
+                var_export($id_antes_del_flush,true),
+                var_export($id_despues_del_flush,true)
+        ));
     }
+    
+    /**
+     * Borro una oferta
+     */
+    public function borrarOfertaCRUDAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        ## Manejado ##
+        $oferta = $em->getRepository('CursoPruebaDoctrineBundle:Oferta')->findOneBySlug('custom-slug');
+        if(null === $oferta)
+            return new Response('Esta oferta no existe');
+        
+        ## Removido ##
+        $em->remove($oferta); // Ninguna conulta todavia.
+        $id_antes_del_flush = $oferta->getId() ;
+        
+        ## Borrado de la bae de datos ##
+        $em->flush();
+        $id_despues_del_flush = $oferta->getId();
+        
+        return new Response(sprintf("Antes del flush: %s, Despues del flush: %s",
+                var_export($id_antes_del_flush,true),
+                var_export($id_despues_del_flush,true)
+        ));
+    }
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
     
     
 }
