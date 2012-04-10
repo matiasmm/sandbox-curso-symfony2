@@ -1,7 +1,6 @@
 <h2>El modelo: Pruebas D2</h2>
 
 <h3>Queries a mano</h3>
-
 <ul>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasDQL'}) }}">DQL: Listado simple</a> :: listadoOfertasDQL</li>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasWithJoinsDQL'}) }}">DQL: Listado más complejo</a> :: listadoOfertasWithJoinsDQL</li>
@@ -9,16 +8,24 @@
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:hidratandoUnArregloDQL'}) }}">DQL: Hidratando un arreglo</a> :: hidratandoUnArregloDQL</li>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:hidratandoUnArregloQB'}) }}">QueryBuilder: Hidratando un arreglo</a> :: hidratandoUnArregloQB</li>
 </ul>
+
 <h3>Repositorios</h3>
 <ul>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:listadoOfertasRepo'}) }}">Repo: Listado simple</a> :: listadoOfertasRepo</li>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorIdRepo'}) }}">Repo: Obtener una oferta por id</a> :: obtenerOfertaPorIdRepo</li>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:obtenerOfertaPorSlugRepo'}) }}">Repo: Obtener una oferta por slug</a> :: obtenerOfertaPorSlugRepo</li>
 </ul>
+
 <h3>How Doctrine keeps track of Objects</h3>
 <ul>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:crearOfertaCRUD'}) }}">CRUD: Nueva oferta</a> :: crearOfertaCRUD</li>
     <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:borrarOfertaCRUD'}) }}">CRUD: Borrar oferta</a> :: borrarOfertaCRUD</li>
+</ul>
+
+<h3>Doctrine Extensions</h3>
+<ul>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:sluggableExtension'}) }}">Extension: creando objetos con urls amigables</a> :: sluggableExtension</li>
+    <li><a href="{{ path('CursoPruebaDoctrineBundle_custom', {'_controller': 'CursoPruebaDoctrineBundle:Default:loggableExtension'}) }}">Extension: Agregando entitades versionadas</a> :: loggableExtension</li>
 </ul>
 
 

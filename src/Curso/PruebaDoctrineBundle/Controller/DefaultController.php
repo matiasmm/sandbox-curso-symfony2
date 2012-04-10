@@ -223,9 +223,48 @@ class DefaultController extends Controller
     
     
     /**
-     * Primer Extension 
+     * Sluggable Extension 
      */
+    public function sluggableExtensionAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        $categoria = new Entity\CursoCategoria();
+        $categoria->setTitulo("Este titulo deberia ser usado para una url amigable");
+        
+        $em->persist($categoria);
+        $em->flush();
+        
+        // el slug creado es "este-titulo-deberia-ser-usado-para-una-url-amigable"
+        
+        return $this->render('CursoPruebaDoctrineBundle:Default:object.html.twig', array(
+            'object' => $categoria,
+            'attributes' => array('id', 'titulo', 'slug'),
+         ));
+        
+    }
     
+    
+    /**
+     * Loggable Extension 
+     */
+    public function loggableExtensionAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        //Busco el articulo con id 1 y si no existe creo uno nuevo
+        $articulo = $em->getRepository("CursoPruebaDoctrineBundle:CursoArticulo")->findOneById(1) ?: new Entity\CursoArticulo();
+        
+        $articulo->setTitulo($articulo->getTitulo() . " ~");
+        $articulo->setDescripcion($articulo->getDescripcion() . " ~");
+        
+        $em->persist($articulo);
+        $em->flush();
+        
+        return $this->render('CursoPruebaDoctrineBundle:Default:object.html.twig', array(
+            'object' => $articulo,
+            'attributes' => array('id', 'titulo', 'slug'),
+         ));
+        
+    }
 
     
     

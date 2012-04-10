@@ -55,7 +55,8 @@ stof_doctrine_extensions:
         default:
             tree: true
             timestampable: false # not needed: listeners are not enabled by default
-        
+            sluggable: true
+            loggable: true
                         
 # Swiftmailer Configuration
 swiftmailer:
