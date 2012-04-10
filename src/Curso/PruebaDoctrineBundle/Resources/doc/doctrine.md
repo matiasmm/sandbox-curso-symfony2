@@ -48,8 +48,7 @@ Doctrine Migrations
     php app/console doctrine:migrations:generate
 
   Lo completamos con las consultas requeridas para efectuar lo campos y revertirlos
-
-    [app/DoctrineMigrations/Version20120410042407.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/app/DoctrineMigrations/Version20120410042407.php)
+  [app/DoctrineMigrations/Version20120410042407.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/app/DoctrineMigrations/Version20120410042407.php)
 
   Ejecutamos el archivo de migración
 
