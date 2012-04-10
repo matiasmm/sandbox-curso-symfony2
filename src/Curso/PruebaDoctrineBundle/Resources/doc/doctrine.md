@@ -32,7 +32,9 @@ Actualizamos el cambio en la base de datos
 
     php app/console doctrine:schema:update
 
-Aplicamos la Extension en CursoCategoria: [src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php#L34)
+Aplicamos la Extension Sluggable en CursoCategoria: [src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php#L34)
+
+Aplicamos la Extension Softdeletable en CursoArticulo: [src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/Aplicamos la Extension en CursoCategoria: [src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php](https://github.com/matubaum/sandbox-curso-symfony2/blob/doctrine/src/Curso/PruebaDoctrineBundle/Entity/CursoCategoria.php#L43)#L34)
 
 
 

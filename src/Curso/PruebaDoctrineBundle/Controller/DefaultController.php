@@ -274,4 +274,39 @@ HTML
         
     }
     
+    
+    /**
+     * Query de reservas cacheadas
+     */
+    public function cacheAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        $query = $em->createQuery('SELECT o FROM CursoPruebaDoctrineBundle:Oferta o');
+        
+        $query->setResultCacheDriver(new \Doctrine\Common\Cache\ApcCache());
+        $query->useResultCache(true);
+        
+        return $this->render('CursoPruebaDoctrineBundle:Default:list.html.twig', array(
+            'collection' => $query->getResult(),
+            'columns' => array('id','nombre', 'slug'),
+         ));
+        
+    }
+    
+    
+    /**
+     * Query de reservas cacheadas
+     */
+    public function herenciaAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        $query = $em->createQuery('SELECT u FROM CursoPruebaDoctrineBundle:CursoUsuario u');
+        
+        return $this->render('CursoPruebaDoctrineBundle:Default:list.html.twig', array(
+            'collection' => $query->getResult(),
+            'columns' => array('id','nombre', '__toString'),
+         ));
+        
+    }
+    
 }
