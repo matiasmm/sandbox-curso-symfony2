@@ -1,5 +1,9 @@
+CursoBundle:
+    resource: "@CursoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 _welcome:
-    pattern: /
+    pattern: /doctrine
     defaults: { _controller: CursoPruebaDoctrineBundle:Default:index }
 
 CursoPruebaDoctrineBundle:
