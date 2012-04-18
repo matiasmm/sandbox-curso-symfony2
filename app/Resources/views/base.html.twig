@@ -2,12 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Welcome!{% endblock %}- Curso</title>
         {% block stylesheets %}{% endblock %}
+        <link href="{{ asset('css/main.css') }}" type="text/css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="body">
+            <div class="head">
+                {% block head %}Curso | 
+{% block menu %}
+                    <ul>
+                        <li></li>
+                    </ul>
+                {% endblock %}
+{% endblock %}
+            </div>
+            <div class="menu">
+                
+            </div>     
+            <div class="content">
+                {% block content %}{% endblock %}
+             </div>
+            {% block javascripts %}{% endblock %}
+        </div>
     </body>
 </html>
