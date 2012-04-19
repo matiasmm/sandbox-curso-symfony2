@@ -10,14 +10,16 @@
     <body>
         <div class="body">
             <div class="head">
-                {% block head %}Curso | 
+                {% block head %}<h1>Curso</h1>
                     
                 {% endblock %}
             </div>
             <div class="menu">
                 {% block menu %}
                     <ul>
-                        <li></li>
+                        <li><a href="{{ path('CursoPruebaDoctrineBundle_homepage') }}">Doctrine</a></li>
+                        <li><a href="{{ path('cursoarticulo') }}">Crud</a></li>
+                        <li><a href="{{ path('formulario_articulo') }}">Formulario</a></li>
                     </ul>
                 {% endblock %}
             </div>     

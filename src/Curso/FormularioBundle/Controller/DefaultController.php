@@ -11,17 +11,15 @@ class DefaultController extends Controller
     public function formAction(Request $request)
     {
         
-        $entity = new \Curso\PruebaDoctrineBundle\Entity\CursoArticulo();
-        
-         $form = $this->createForm(new \Curso\PruebaDoctrineBundle\Form\CursoArticuloType(), $entity);
+         $form = $this->createForm(new \Curso\PruebaDoctrineBundle\Form\CursoArticuloType(), array());
          
+     
          if("POST" == $request->getMethod()){
              $form->bindRequest($request);
              if($form->isValid()){
-                 $em = $this->getDoctrine()->getEntityManager();
-                 $em->persist($entity);
-                 $em->flush();
+                 $data = $form->getData();
                  
+                 $this->get('app.business.articulo')->crearNuevo($data);
              }else{
                  
              }

@@ -10,3 +10,26 @@
     color: #EFEFEF;
     padding: 1em;
 }
+
+.menu{
+    background-color: #EFEFEF;
+    border-bottom: 1px solid black;
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    color: black;
+    padding: 0.1em;
+    text-decoration: none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.menu li{
+    display: inline;
+    padding: 1em;
+}
+
+h1{
+    display: inline;
+}

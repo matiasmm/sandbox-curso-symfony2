@@ -139,7 +139,7 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "83a0edd24bcecf5155c71bd34aee55a0ee28c454",
+            "source-reference": "684e5025add5aac20094ff6a8c5c2bc71952b364",
             "alias": "2.1.9999999.9999999-dev"
         },
         {
