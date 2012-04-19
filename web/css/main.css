@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.head{
+    background-color: #036;
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    color: #EFEFEF;
+    padding: 1em;
+}
