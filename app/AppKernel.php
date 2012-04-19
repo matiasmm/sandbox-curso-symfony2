@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             
             # My App
             new Curso\PruebaDoctrineBundle\CursoPruebaDoctrineBundle(),
-//            new Curso\CursoBundle\CursoBundle(),
+            new Curso\CursoBundle\CursoBundle(),
             
             # Vendors installed
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),

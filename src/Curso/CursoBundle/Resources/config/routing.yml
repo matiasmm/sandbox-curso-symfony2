@@ -1,0 +1,3 @@
+CursoBundle_homepage:
+    pattern:  /
+    defaults: { _controller: CursoBundle:Default:index }

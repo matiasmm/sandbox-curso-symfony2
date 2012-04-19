@@ -1,0 +1,7 @@
+parameters:
+#    curso.example.class: Curso\CursoBundle\Example
+
+services:
+#    curso.example:
+#        class: %curso.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

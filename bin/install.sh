@@ -14,13 +14,18 @@ fi
 # Composer
 if [ ! -f composer.phar ]
 then
+    rm composer.phar
     wget http://getcomposer.org/composer.phar
 fi
 
 php composer.phar install
+
+mkdir app/cache
+mkdir app/logs
 
 chmod -R ugo+rwx app/cache
 chmod -R ugo+rwx app/logs
 mysqladmin --force drop --user=$BD_USER --password=$BD_PASSWORD cupon 
 mysqladmin --force create --user=$BD_USER --password=$BD_PASSWORD cupon 
 mysql --user=$BD_USER --password=$BD_PASSWORD cupon < database-dump.sql
+php app/console
