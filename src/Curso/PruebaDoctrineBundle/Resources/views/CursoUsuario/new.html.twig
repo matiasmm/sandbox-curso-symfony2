@@ -1,0 +1,16 @@
+<h1>CursoUsuario creation</h1>
+
+<form action="{{ path('cursousuario_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('cursousuario') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>

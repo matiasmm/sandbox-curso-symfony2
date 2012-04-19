@@ -1,0 +1,30 @@
+cursousuario:
+    pattern:  /
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:index" }
+
+cursousuario_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:show" }
+
+cursousuario_new:
+    pattern:  /new
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:new" }
+
+cursousuario_create:
+    pattern:  /create
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:create" }
+    requirements: { _method: post }
+
+cursousuario_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:edit" }
+
+cursousuario_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:update" }
+    requirements: { _method: post }
+
+cursousuario_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoUsuario:delete" }
+    requirements: { _method: post }

@@ -1,0 +1,10 @@
+cursoarticulo:
+    pattern:  /
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoArticulo:index" }
+
+cursoarticulo_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "CursoPruebaDoctrineBundle:CursoArticulo:show" }
+
+
+

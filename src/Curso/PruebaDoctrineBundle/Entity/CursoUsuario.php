@@ -40,6 +40,11 @@ class CursoUsuario
         return $this->nombre;
     }
     
+    
+    public function setNombre($nombre){
+        $this->nombre = $nombre;
+    }
+    
     function __toString(){
         return "Soy normal";
     }

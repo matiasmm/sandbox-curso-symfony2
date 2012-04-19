@@ -28,7 +28,7 @@ class AppKernel extends Kernel
             # Vendors installed
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-            
+            new Curso\FormularioBundle\CursoFormularioBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

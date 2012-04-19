@@ -1,0 +1,3 @@
+formulario_articulo:
+    pattern:  /
+    defaults: { _controller: CursoFormularioBundle:Default:form }

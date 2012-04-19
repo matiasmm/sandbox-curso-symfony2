@@ -10,3 +10,11 @@ CursoPruebaDoctrineBundle_dql:
 CursoPruebaDoctrineBundle_custom:
     pattern:  /custom/{_controller}
     
+CursoPruebaDoctrineBundle_cursoarticulo:
+    resource: "@CursoPruebaDoctrineBundle/Resources/config/routing/cursoarticulo.yml"
+    prefix:   /cursoarticulo
+
+
+cursoPruebaDoctrineBundle_cursousuario:
+        resource: "@CursoPruebaDoctrineBundle/Resources/config/routing/cursousuario.yml"
+        prefix:   /cursousuario

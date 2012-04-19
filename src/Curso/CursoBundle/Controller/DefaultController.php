@@ -12,4 +12,14 @@ class DefaultController extends Controller
     {
         return $this->render('CursoBundle:Default:index.html.twig');
     }
+    
+    public function formAction()
+    {
+        $form = $this->createForm(new \Curso\PruebaDoctrineBundle\Form\CursoArticuloType());
+        
+        return $this->render('CursoBundle:Default:index.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+    
 }

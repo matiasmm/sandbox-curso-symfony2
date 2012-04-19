@@ -1,3 +1,7 @@
+CursoFormularioBundle:
+    resource: "@CursoFormularioBundle/Resources/config/routing.yml"
+    prefix:   /formularios
+
 CursoBundle:
     resource: "@CursoBundle/Resources/config/routing.yml"
     prefix:   /
